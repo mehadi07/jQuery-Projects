@@ -1,17 +1,20 @@
 var main = function() {
-  $('#top-text').keyup(function(){
-   var topText = $(this).val();
-    $('.top-caption').text(topText);
-    });
-  $('#bottom-text').keyup(function(){
-   var bottomText = $(this).val();
-    $('.bottom-caption').text(bottomText);
-    });
-  $('#image-url').keyup(function(){
-   var src = $(this).val();
-  $(this).attr();
 
-    });
+  $('#top-text').keyup(function() {
+    var top = $(this).val();
+    $('.top-caption').text(top);
+  });
+
+  $('#bottom-text').keyup(function() {
+    var bottom = $(this).val();
+    $('.bottom-caption').text(bottom);
+  });
+
+  $('#image-url').keyup(function() {
+    var image = $(this).val();
+    $('#meme').attr('src', image);
+  });
+
 };
- 
+
 $(document).ready(main);
